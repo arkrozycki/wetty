@@ -130,6 +130,7 @@ io.on('connection', function(socket){
         term.write(data);
     });
     socket.on('disconnect', function() {
+    	console.log((new Date()) + " PID=" + term.pid + " DISCONNECTED");
         term.end();
     });
 })
